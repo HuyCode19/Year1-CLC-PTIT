@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+	int t;
+	cin>>t;
+	while(t--){
+		int a = 1000,b = 500,c = 200, d = 100, e = 50, f = 20, g=10,h=5,i = 2,k = 1;
+		int count  = 0;
+		int n;
+		cin>>n;
+		while( n!=0 ){
+			if(n >=a ){
+				count++;
+				n -= a;
+			}else if(n>=b){
+				count++;
+				n -= b;
+			}else if(n>=c){
+				count++;
+				n -= c;
+			}else if(n>=d){
+				count++;
+				n -= d;
+			}else if(n>=e){
+				count++;
+				n -= e;
+			}else if(n>=f){
+				count++;
+				n -= f;
+			}else if(n>=g){
+				count++;
+				n -= g;
+			}else if(n>=h){
+				count++;
+				n -= h;	
+			}else if(n>=i){
+				count++;
+				n -= i;
+			}else if(n>=k){
+				count++;
+				n -= k;
+			}
+	}
+	cout<<count<<endl;
+	}
+	return 0;
+}
