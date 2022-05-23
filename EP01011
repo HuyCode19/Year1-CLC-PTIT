@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int bp(int n){
+	int p = sqrt(n);
+	if( p*p == n ) return 1;
+	return 0;
+}
+int main (){
+	int a,b;
+	cin>>a>>b;
+	int sum = 0;
+	for(int i=a;i<=b;i++){
+		if(bp(i)==1){
+			sum += i;
+		}
+	}
+	cout<<sum<<endl;
+    return 0;
+}
