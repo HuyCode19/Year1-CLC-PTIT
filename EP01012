@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+	int t;
+	cin>>t;
+	while(t--){
+		int a,b;
+		cin>>a>>b;
+		int n = 2;
+		while( n <= 3){
+			if(a%n == 0){
+				a /= n;
+			}else{
+				n++;
+			}
+		}
+		int k = 2;
+		while( k <= 3 ){
+			if(b%k == 0){
+				b /= k;
+			}else{
+				k++;
+			}
+		}
+		if(a==b){
+			cout<<"YES";
+		}else{
+			cout<<"NO";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
