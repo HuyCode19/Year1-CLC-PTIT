@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long tong(long long n){
+	long long sum = 0;
+	while( n!=0){
+		int r = n%10;
+		sum += r;
+		n /= 10;
+	}
+	if( sum >= 10 ) return tong(sum); 
+	return sum;
+}
+int main (){
+	int t;
+	cin>>t;
+	while(t--){
+		long long a;
+		cin>>a;
+		int h = tong(a);
+		cout<<h<<endl;
+	}
+	return 0;
+}
+		
+		
