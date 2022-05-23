@@ -1,0 +1,11 @@
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+int main (){
+    ll a,b,c,d;
+    cin>>a>>b>>c>>d;
+    ll m = abs(a-b);
+    ll n = abs(b -c);
+    ll k = abs(c - d);
+    cout<<__gcd(m,__gcd(n,k));
+}
