@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+int check(int n){
+	if(n<2) return 0;
+	for(int i = 2;i<=sqrt(n);i++){
+		if(n%i==0) return 0;
+	}
+	return 1;
+}
+int main (){
+	int t;
+	cin>>t;
+	while(t--){
+		int n ;
+		cin>>n;
+		int a = 0;
+		int b = 0;
+ 		for(int i = 2;i<n;i++){
+			if(check(i) == 1 && check(n-i) == 1){
+				a = i ;
+				b = n - i;
+				break;
+			}
+		}
+		if(a != 0 && b != 0){
+			cout<<a<<" "<<b<<endl;
+		}else{
+			cout<<"-1"<<endl;
+		}
+	}
+	return 0;
+}
+		
