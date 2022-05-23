@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+int nto(int n){
+	if(n<2) return 0;
+	for(int i=2;i<=sqrt(n);i++){
+		if(n%i==0) return 0;
+	}
+	return 1;
+}
+int main (){
+	int t;
+	cin>>t;
+	while(t--){
+		long long a;
+		cin>>a;
+		long long h = a;
+		int sum = 0;
+		while( a!=0 ){
+			int r = a%10;
+			sum += r;
+			a /= 10;
+		}
+		if(nto(sum)==1){
+			cout<<h<<endl;
+		}else{
+			cout<<"-1"<<endl;;
+		}
+	}
+	return 0;
+}
+			
